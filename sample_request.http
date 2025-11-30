@@ -1,0 +1,80 @@
+########################################
+## AUTH WITH GOOGLE
+########################################
+POST http://127.0.0.1:8000/api/v1/auth/google
+Content-Type: application/json
+Accept: application/json
+
+{
+  "access_token": ""
+}
+
+########################################
+## AUTH WITH FACEBOOK
+########################################
+POST http://127.0.0.1:8000/api/v1/auth/facebook
+Content-Type: application/json
+Accept: application/json
+
+{
+  "access_token": ""
+}
+
+########################################
+## AUTH WITH CUSTOM
+########################################
+POST http://127.0.0.1:8000/api/v1/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "bbbb@gmail.com",
+  "password": "asdasdasd"
+}
+
+########################################
+## REGISTER
+########################################
+POST http://127.0.0.1:8000/api/v1/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "asdasd1@gmail.com",
+  "password": "asdasdasd",
+  "password_confirmation": "asdasdasd",
+  "name": "test",
+  "avatar": "http://avatar.png"
+}
+
+########################################
+## GET PROFILE USER
+########################################
+GET http://127.0.0.1:8000/api/v1/users/profile
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2F1dGgvdG9rZW4vcmVmcmVzaCIsImlhdCI6MTc2NDUyOTMxNywiZXhwIjoxNzY0NTMxMTA3LCJuYmYiOjE3NjQ1MzEwNDcsImp0aSI6IlhxUmV5TVJCakdFRXBPQXciLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.qTe8XJhTaq86c5nxbEEFRQQgmtfYerdHpiH4kINalJI
+
+########################################
+## UPDATE PROFILE USER
+########################################
+PUT http://127.0.0.1:8000/api/v1/users/profile
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE3NjQ1MjkyMzksImV4cCI6MTc2NDUzMjgzOSwibmJmIjoxNzY0NTI5MjM5LCJqdGkiOiJ6aHh0YlJySUxiUHBOZTVtIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5AgINpiWvTmfYgQdRBttGoVdeb1Ck9LOuiN3mP2Ll0k
+
+{
+  "email": "bbbb@gmail.com",
+  "password": "asdasdasd",
+  "password_confirmation": "asdasdasd",
+  "name": "bbb",
+  "avatar": "http://avatar.png"
+}
+
+########################################
+## REFRESH TOKEN
+########################################
+POST http://127.0.0.1:8000/api/v1/auth/token/refresh
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2F1dGgvdG9rZW4vcmVmcmVzaCIsImlhdCI6MTc2NDUyOTMxNywiZXhwIjoxNzY0NTMxMTA3LCJuYmYiOjE3NjQ1MzEwNDcsImp0aSI6IlhxUmV5TVJCakdFRXBPQXciLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.qTe8XJhTaq86c5nxbEEFRQQgmtfYerdHpiH4kINalJI
